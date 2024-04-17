@@ -1,6 +1,7 @@
 package vcp.np.datasource.usermanagement.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,5 +17,7 @@ public interface UserClientServiceRepository extends JpaRepository<UserClientSer
     List<UserClientService> findAllByUser(User user);
 
     Page<UserClientService> findAll(Specification<UserClientService> specification, Pageable pageable);
+
+    Optional<UserClientService> findByUserIdAndClientServiceId(Long userId, Long clientServiceId);
 
 }

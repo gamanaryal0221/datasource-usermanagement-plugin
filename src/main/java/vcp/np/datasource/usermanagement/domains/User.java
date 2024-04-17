@@ -113,6 +113,18 @@ public class User {
         return "User [username=" + username + "]";
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     public String getFullname() {
         return firstName + " " + ((middleName != null && !middleName.isEmpty())? (middleName + " "):"") + lastName;
     }

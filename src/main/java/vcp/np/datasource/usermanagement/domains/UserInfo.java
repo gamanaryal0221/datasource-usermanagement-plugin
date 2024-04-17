@@ -36,6 +36,21 @@ public class UserInfo {
     @JoinColumn(name = "created_from_client_id", nullable = false)
     private Client createdFromClient;
 
+
+    public UserInfo() {
+    }
+
+    public UserInfo(User user, User createdBy, User lastUpdatedBy, Client createdFromClient) {
+        this.user = user;
+        this.createdBy = createdBy;
+        this.lastUpdatedBy = lastUpdatedBy;
+        this.createdFromClient = createdFromClient;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     public User getCreatedBy() {
         return createdBy;
     }
